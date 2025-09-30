@@ -3,7 +3,8 @@
 ## Objective
 
 The objective of this project is to build a simple, web-based chatbot that provides professional advice and answers to common workplace questions.  
-The chatbot uses a fixed knowledge base and displays recent chat history, offering users a fast and user-friendly way to get productivity tips, remote work guidance, and more.  
+The chatbot uses a **fixed knowledge base** and optionally falls back to a **LLaMA model via Groq API** for questions not in the knowledge base.  
+It also displays recent chat history, offering users a fast and user-friendly way to get productivity tips, remote work guidance, and more.  
 This project demonstrates how to integrate a React frontend with a Flask backend for a complete, interactive web application.
 
 ---
@@ -11,11 +12,17 @@ This project demonstrates how to integrate a React frontend with a Flask backend
 ## Features
 
 - Ask professional questions (productivity, remote work, task prioritization, startup funding, etc.)
-- See the last 10 questions and answers as chat history
+- Answers matched from a **knowledge base** or fallback **LLM via Groq API**
+- See the last 10 questions and answers as **chat history**
 - Fast, responsive UI
 - Easy to run locally
+- Clear, concise, and professional answers (1–2 sentences)
 
 ---
+
+## Project Structure
+
+
 
 ## Project Structure
 
@@ -87,9 +94,10 @@ mini-ai-chatbot/
 
 ## Usage
 
-- Open [http://localhost:3000](http://localhost:3000) in your browser.
-- Type a question and click **Send**.
-- View answers and chat history.
+-Open http://localhost:3000 in your browser.
+-Type a question and click Send.
+-View answers and the last 10 questions in the chat history.
+-Clear chat history using the Clear button (calls /clear).
 
 ---
 
@@ -102,9 +110,9 @@ mini-ai-chatbot/
 
 ## Assumptions
 
-- The chatbot answers are matched from a fixed knowledge base (no real AI/LLM).
-- Chat history is stored locally in a JSON file.
-- No authentication or user management.
+-The chatbot answers are matched from a fixed knowledge base.
+-If a question is not in the knowledge base, it uses a LLaMA model via Groq API as a fallback.
+-Chat history is stored locally in chat_history.json.
 - The app is intended for local/demo use only.
 
 ---
