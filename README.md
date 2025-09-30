@@ -94,10 +94,10 @@ mini-ai-chatbot/
 
 ## Usage
 
--Open http://localhost:3000 in your browser.
--Type a question and click Send.
--View answers and the last 10 questions in the chat history.
--Clear chat history using the Clear button (calls /clear).
+- Open [http://localhost:3000](http://localhost:3000) in your browser.
+- Type a question and click **Send**.
+- View answers and the last 10 questions in the chat history.
+- Clear chat history using the **Clear** button (calls `/clear`).
 
 ---
 
@@ -110,10 +110,10 @@ mini-ai-chatbot/
 
 ## Assumptions
 
--The chatbot answers are matched from a fixed knowledge base.
--If a question is not in the knowledge base, it uses a LLaMA model via Groq API as a fallback.
--Chat history is stored locally in chat_history.json.
-- The app is intended for local/demo use only.
+- The chatbot answers are matched from a **fixed knowledge base**.  
+- If a question is not in the knowledge base, it uses a **LLaMA model via Groq API** as a fallback.  
+- **Chat history** is stored locally in `chat_history.json`.  
+- The app is intended for **local/demo use only**.  
 
 ---
 
