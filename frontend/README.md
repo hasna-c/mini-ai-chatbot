@@ -46,4 +46,3 @@ This is the frontend part of the Mini AI Chatbot project, built using React. The
 - The backend API is running and accessible at the expected endpoint.
 - The user has a basic understanding of how to run a React application.
 
-Feel free to reach out if you have any questions or need further assistance!
